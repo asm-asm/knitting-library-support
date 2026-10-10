@@ -1,0 +1,31 @@
+name: お問い合わせ・不具合の報告
+description: 編み図ライブラリについてのご質問、不具合のご報告、ご要望
+title: "[お問い合わせ] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **ここに書いた内容はインターネット上で公開されます。** お名前・メールアドレス・購入情報などの個人情報は書かないでください。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 不具合の報告
+        - 使い方の質問
+        - ご要望
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 内容
+      description: どの画面で、何をしたときに、どうなったかを書いてください。
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: お使いの端末と iOS のバージョン（わかる範囲で）
+      placeholder: 例：iPhone 15、iOS 18.1
